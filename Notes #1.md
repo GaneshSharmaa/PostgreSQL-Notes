@@ -202,8 +202,7 @@ Look at the `ACC_TYPE` where we have datatype `VARCHAR(50)` which means this tak
 
 **SERIAL constraint:**
 
-Serial constraint means that the value keeps on getting auto-incremented everytime you give a new entry.
-
+Serial constraint means that the value keeps on getting auto-incremented everytime you give a new entry.\
 It is auto-increment constraint.
 
 ```sql
