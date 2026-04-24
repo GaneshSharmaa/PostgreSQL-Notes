@@ -8,6 +8,8 @@ By using clause you can provide conditions in the query.
 - Limit
 - Like
 
+----
+
 ### WHERE clause:
 
 Where clause could be used for giving conditions, to make a validating condition check.\
@@ -17,6 +19,8 @@ Example:
 SELECT * FROM EMPLOYEES
 WHERE EMP_NAME = 'ARJUN';
 ```
+
+----
 
 ### Using operators — `OR` operator
 
@@ -91,4 +95,16 @@ WHERE SALARY BETWEEN 40000 AND 65000;
 ```
 
 Here, the `BETWEEN` clause includes both the lower value as well as the upper value.
+
+----
+
+### `DISTINCT` clause
+
+The distinct clause is used for getting unique values from the table.
+
+For example, getting unique department data
+
+```sql
+SELECT DISTINCT DEPT FROM EMPLOYEES;
+```
 
