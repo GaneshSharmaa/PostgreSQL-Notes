@@ -25,3 +25,10 @@ For example, total number of employees in each department.
 SELECT DEPT, COUNT(*) FROM EMPLOYEES
 GROUP BY DEPT;
 ```
+
+Another example, sum of total salary of employees in each department.
+
+```sql
+SELECT DEPT, SUM(SALARY) FROM EMPLOYEES
+GROUP BY DEPT;
+```
