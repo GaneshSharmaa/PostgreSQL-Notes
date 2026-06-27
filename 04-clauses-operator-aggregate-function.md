@@ -222,10 +222,30 @@ WHERE PRODUCT_ID IN (2, 3, 5, 9, 13, 15, 18, 19);
     - `%` → Zero or more characters
     - `_` → Exactly one character
 
-**Q:** Write a query to display the SKU code of items starting with 'W'.
+**Q:** Write a query to display the items with SKU code starting with 'W'.
 
 ```sql
 SELECT * FROM PRODUCT
 WHERE SKU_CODE LIKE 'W%';
 ```
 
+**Q:** Write a query to display the items with SKU code ending with 0.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE SKU_CODE LIKE '%0';
+```
+
+**Q:* Write a query to display the items that has 'e' as their second character in their name.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE NAME LIKE '_e%';
+```
+
+**Q:** Write a query to display the items whose name has 'i' at their fifth position.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE NAME LIKE '____i%';
+```
