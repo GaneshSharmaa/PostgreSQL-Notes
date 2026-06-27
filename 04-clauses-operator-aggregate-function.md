@@ -201,12 +201,31 @@ WHERE PRICE BETWEEN 300 AND 600;
 
 ### Set operator (`IN`):
 
-- `IN` clause is used when you want to check if a value matches any value in a list.
+- `IN` operator is used when you want to check if a value matches any value in a list.
 
 - Instead of writing multiple `OR` conditions, you can use `IN`.
 
 ```sql
 SELECT * FROM PRODUCT
 WHERE PRODUCT_ID IN (2, 3, 5, 9, 13, 15, 18, 19);
+```
+
+----
+
+### Pattern operator (`LIKE`):
+
+- The `LIKE` operator is used for pattern matching in text columns.
+
+- Instead of matching an exact value, it lets you search for text that follows a pattern.
+
+- There are two main wildcards:
+    - `%` → Zero or more characters
+    - `_` → Exactly one character
+
+**Q:** Write a query to display the SKU code of items starting with 'W'.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE SKU_CODE LIKE 'W%';
 ```
 
