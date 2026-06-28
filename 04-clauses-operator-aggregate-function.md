@@ -249,3 +249,29 @@ WHERE NAME LIKE '_e%';
 SELECT * FROM PRODUCT
 WHERE NAME LIKE '____i%';
 ```
+
+----
+
+### Logical operator (`AND`, `OR`, `NOT`)
+
+**Q:** Write a query to display the items that have price less than 500, and belong to the 'Kitchen' category.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE PRICE < 500 AND CATEGORY = 'Kitchen';
+```
+
+**Q:** Write a query to display the items that are from either 'Accessories' category or have stock of less than 100.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE CATEGORY = 'Accessories' OR STOCK_QUANTITY < 100;
+```
+
+**Q:** Write a query to display the items that are not from 'Electronics' category.
+
+```sql
+SELECT * FROM PRODUCT
+WHERE NOT CATEGORY = 'Electronics';
+```
+
