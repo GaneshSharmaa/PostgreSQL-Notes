@@ -236,7 +236,7 @@ SELECT * FROM PRODUCT
 WHERE SKU_CODE LIKE '%0';
 ```
 
-**Q:* Write a query to display the items that has 'e' as their second character in their name.
+**Q:** Write a query to display the items that has 'e' as their second character in their name.
 
 ```sql
 SELECT * FROM PRODUCT
