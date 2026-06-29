@@ -76,6 +76,11 @@ LIMIT 1;
 
 **Q:** Write a query to display the average price of products that belong to the 'Home & Kitchen' or 'Fitness' category.
 
+```sql
+SELECT ROUND(AVG(PRICE), 2) FROM PRODUCT
+WHERE CATEGORY IN ('Home & Kitchen', 'Fitness');
+```
+
 **Q:** Write a query to show product names and stock quantity where the product is available, stock is more than 50, and price is not equal to 299.
 
 **Q:** Write a query to display the most expensive product in each category (name and price).
