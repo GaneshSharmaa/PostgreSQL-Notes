@@ -83,6 +83,11 @@ WHERE CATEGORY IN ('Home & Kitchen', 'Fitness');
 
 **Q:** Write a query to show product names and stock quantity where the product is available, stock is more than 50, and price is not equal to 299.
 
+```sql
+SELECT NAME, STOCK_QUANTITY FROM PRODUCT
+WHERE IS_AVAIL AND STOCK_QUANTITY > 50 AND PRICE != 299;
+```
+
 **Q:** Write a query to display the most expensive product in each category (name and price).
 
 **Q:** Write a query to show all unique categories in uppercase, sorted in descending order.
