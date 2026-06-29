@@ -62,3 +62,16 @@ SELECT MAX(PRICE) FROM PRODUCT
 WHERE CATEGORY = 'Electronics';
 ```
 
+-----
+
+Now, that we've learned about _clauses_, _operators_, and _aggregation functions_ now, let's practise some questions.
+
+**Q:** Write a query to display the name and price of the cheapest product in the entire table.
+
+**Q:** Write a query to display the average price of products that belong to the 'Home & Kitchen' or 'Fitness' category.
+
+**Q:** Write a query to show product names and stock quantity where the product is available, stock is more than 50, and price is not equal to 299.
+
+**Q:** Write a query to display the most expensive product in each category (name and price).
+
+**Q:** Write a query to show all unique categories in uppercase, sorted in descending order.
