@@ -41,8 +41,10 @@ WHERE CATEGORY = 'Furniture';
 
 **Q:** Write a query to display the average price of the items belonging to the 'Stationery' category.
 
+`ROUND()` is used to round-off the values to desired precision.
+
 ```sql
-SELECT AVG(PRICE) FROM PRODUCT
+SELECT ROUND(AVG(PRICE), 2) FROM PRODUCT
 WHERE CATEGORY = 'Stationery';
 ```
 
