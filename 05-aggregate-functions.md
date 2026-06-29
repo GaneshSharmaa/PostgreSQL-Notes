@@ -103,3 +103,9 @@ GROUP BY CATEGORY;
 ```
 
 **Q:** Write a query to show all unique categories in uppercase, sorted in descending order.
+
+```sql
+SELECT DISTINCT UPPER(CATEGORY) FROM PRODUCT
+ORDER BY UPPER(CATEGORY) DESC;
+```
+
