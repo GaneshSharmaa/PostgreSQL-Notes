@@ -64,6 +64,8 @@ WHERE CATEGORY = 'Electronics';
 
 -----
 
+# Questions
+
 Now, that we've learned about _clauses_, _operators_, and _aggregation functions_ now, let's practise some questions.
 
 **Q:** Write a query to display the name and price of the cheapest product in the entire table.
@@ -96,9 +98,8 @@ WHERE IS_AVAIL AND STOCK_QUANTITY > 50 AND PRICE != 299;
 **Q:** Write a query to display the most expensive product in each category (name and price).
 
 ```sql
-SELECT NAME, PRICE FROM PRODUCT
-GROUP BY CATEGORY
-ORDER BY PRICE DESC LIMIT 1;
+SELECT CATEGORY, MAX(PRICE) AS MAX_PRICE FROM PRODUCT
+GROUP BY CATEGORY;
 ```
 
 **Q:** Write a query to show all unique categories in uppercase, sorted in descending order.
