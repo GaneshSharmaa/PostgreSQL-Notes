@@ -57,3 +57,13 @@ SELECT SUBSTR(SKU_CODE, 1, 2) FROM PRODUCT;
 SELECT SUBSTR(SKU_CODE, 3, 6) FROM PRODUCT;
 ```
 
+- Also, if you want to extract sub-strings then we can do using `LEFT()` and `RIGHT()` function, and as name suggest they work from left to right and right to left, respectively.
+
+```sql
+SELECT LEFT('HELLO WORLD!', 5);
+```
+
+```sql
+SELECT RIGHT('HELLO WORLD!', 7);
+```
+
