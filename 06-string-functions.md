@@ -45,3 +45,15 @@ SELECT SUBSTR('brother in arms', 1, 7);
 SELECT SUBSTR('brother in arms', 12, 4);
 ```
 
+**Q:** Write a query to display the only alphabetic characters from the alphanumeric SKU code.
+
+```sql
+SELECT SUBSTR(SKU_CODE, 1, 2) FROM PRODUCT;
+```
+
+**Q:** Write a query to display the only numeric characters from the alphanumeric SKU code.
+
+```sql
+SELECT SUBSTR(SKU_CODE, 3, 6) FROM PRODUCT;
+```
+
