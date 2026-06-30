@@ -67,3 +67,25 @@ SELECT LEFT('HELLO WORLD!', 5);
 SELECT RIGHT('HELLO WORLD!', 7);
 ```
 
+### `CONCAT()` and `CONCAT_WS()` function
+
+- `CONCAT()` concatenates two strings, while `CONCAT_WS()` concatenates two string with separator in between.
+
+**Q:** Write a query to display the concatenated names and categories.
+
+```sql
+SELECT CONCAT(NAME, CATEGORY) FROM PRODUCT;
+```
+
+**Q:** Write a query to display the contenated names and categories with a space in between.
+
+```sql
+SELECT CONCAT(NAME, ' ', CATEGORY) FROM PRODUCT;
+```
+
+- Now, if you want to concatenate multiple entities, so instead of always adding separator in string, we can use `CONCAT_WS()` method, in which we first pass in the separator.
+
+```sql
+SELECT CONCAT_WS('-', NAME, CATEGORY, SKU_CODE) FROM PRODUCT;
+```
+
