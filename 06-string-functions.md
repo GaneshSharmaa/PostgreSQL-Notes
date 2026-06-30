@@ -89,3 +89,24 @@ SELECT CONCAT(NAME, ' ', CATEGORY) FROM PRODUCT;
 SELECT CONCAT_WS('-', NAME, CATEGORY, SKU_CODE) FROM PRODUCT;
 ```
 
+### `TRIM()` and `REPLACE()` functions
+
+- `TRIM()`, this function will remove all the spaces from the string.
+- `REPLACE()` this function will replace any thing you want.
+
+```sql
+SELECT TRIM('   HELLO   ');
+```
+
+- Syntax: `REPLACE(STRING, OLD_STRING, NEW_STRING)`
+
+```sql
+SELECT NAME, REPLACE(SKU_CODE, LEFT(SKU_CODE, 2), 'GG') FROM PRODUCT;
+```
+
+**Q:** Write a query to replace the spaces in the name, with a hyphen.
+
+```sql
+SELECT REPLACE(NAME, ' ', '-') FROM PRODUCT;
+```
+
