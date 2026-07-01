@@ -116,3 +116,14 @@ ALTER TABLE STUDENTS
 DROP CONSTRAINT AGE_CHECK;
 ```
 
+----
+
+### Renaming a table
+
+For example you want to rename the table,
+
+```sql
+ALTER TABLE STUDENTS
+RENAME TO SCHOOL_STUDENTS;
+```
+
