@@ -43,3 +43,21 @@ SELECT NAME, PRICE,
 FROM PRODUCT;
 ```
 
+----
+
+**Q:** Write a query to add a column 'Price_Category' into a already existing table 'Product' with 20 records, where:\
+if the price is above 1000 → categorize it as expensive,\
+if the price is between 500 and 1000 → categorize it as moderate,\
+and, if the price is below 500 → categorize it as cheap.
+
+```sql
+UPDATE PRODUCT
+SET PRICE_CATEGORY = CASE
+    WHEN (PRICE > 1000) THEN 'Expensive'
+    WHEN (PRICE BETWEEN 500 AND 1000) THEN 'Moderate'
+    ELSE 'Cheap'
+END;
+```
+
+This way, we also updated the existing recordsof the table.
+
