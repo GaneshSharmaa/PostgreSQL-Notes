@@ -121,11 +121,13 @@ Cheap
 Hint: Use `CASE` inside `ORDER BY`.
 
 ```sql
-SELECT * FROM PRODUCT
-ORDER BY CASE
-    WHEN PRICE_CATEGORY = 'Expensive'
-    WHEN PRICE_CATEGORY = 'Moderate'
-    ELSE 'Cheap'
+SELECT *
+FROM PRODUCT
+ORDER BY
+CASE
+    WHEN PRICE_CATEGORY = 'Expensive' THEN 1
+    WHEN PRICE_CATEGORY = 'Moderate' THEN 2
+    ELSE 3
 END;
 ```
 
