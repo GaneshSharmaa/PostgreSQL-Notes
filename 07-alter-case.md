@@ -88,3 +88,18 @@ ALTER TABLE STUDENTS
 ALTER COLUMN AGE DROP DEFAULT;
 ```
 
+----
+
+### Adding a constraint
+
+In order to add a constraint, you have to also give a name to it. For example, here we added a constraint to the 'age' column, so it would also require a constraint name 'age_check'.
+
+We don't to add the constraint name, while initializing a table, because it get done automatically. But, while adding a constraint after initializing a table then you have to do it.
+
+For example, add a constraint to the 'age' column for age should be greater than or equal to 0.
+
+```sql
+ALTER TABLE STUDENTS
+ADD CONSTRAINT AGE_CHECK CHECK (AGE >= 0);
+```
+
