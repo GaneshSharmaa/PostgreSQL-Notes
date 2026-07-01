@@ -77,3 +77,14 @@ ALTER TABLE STUDENTS
 ALTER COLUMN AGE SET DEFAULT 18;
 ```
 
+----
+
+### Removing a default value
+
+For example, you want to remove the default value from the column 'age'.
+
+```sql
+ALTER TABLE STUDENTS
+ALTER COLUMN AGE DROP DEFAULT;
+```
+
