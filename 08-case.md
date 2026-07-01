@@ -83,8 +83,9 @@ END;
 
 ```sql
 SELECT NAME,
-CASE WHEN IS_AVAIL THEN 'In stock'
-ELSE 'Out of stock'
+CASE
+    WHEN IS_AVAIL THEN 'In stock'
+    ELSE 'Out of stock'
 END AS AVAILABILITY_STATUS
 FROM PRODUCT;
 ```
