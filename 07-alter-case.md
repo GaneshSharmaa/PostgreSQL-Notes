@@ -66,3 +66,14 @@ ALTER TABLE STUDENTS
 ALTER COLUMN AGE TYPE SMALLINT;
 ```
 
+----
+
+### Set/Changing the default value of a column
+
+For example, you want to set the default value for the column 'age' to 18.
+
+```sql
+ALTER TABLE STUDENTS
+ALTER COLUMN AGE SET DEFAULT 18;
+```
+
