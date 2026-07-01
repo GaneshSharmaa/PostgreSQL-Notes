@@ -63,7 +63,7 @@ This way, we also updated the existing recordsof the table.
 
 ----
 
-**Q:** Write a query to add another column to the existing table 'Product' containing 20 records. The column should categorize the stock into high, medium, and low.\
+**Q:** Write a query to display name, stock quantity and stock level. Where the column stock level should categorize the stock into high, medium, and low.\
 If quantity is more than 100 → high stock,\
 if quantity is between 30 to 100 → medium stock,\
 if quantity is less than 30 → low stock.
@@ -75,5 +75,17 @@ SET STOCK_LEVEL = CASE
     WHEN (STOCK_QUANTITY BETWEEN 30 AND 100) THEN 'Medium stock'
     ELSE 'Low stock'
 END;
+```
+
+----
+
+**Q:** Write a query to display the name and stock availabilty status when if the stock is available shows 'in stock' else 'out of stock'.
+
+```sql
+SELECT NAME,
+CASE WHEN IS_AVAIL THEN 'In stock'
+ELSE 'Out of stock'
+END AS AVAILABILITY_STATUS
+FROM PRODUCT;
 ```
 
