@@ -1,6 +1,6 @@
 # Questions on Cases
 
-**Q:** Display the product name, price, and a new column called Price_Level using these rules:\
+**Q1:** Display the product name, price, and a new column called Price_Level using these rules:\
 Price < 500 → Cheap,\
 Price between 500 and 2000 → Moderate,\
 Price > 2000 → Expensive.
@@ -17,7 +17,7 @@ FROM PRODUCT;
 
 ----
 
-**Q:** Display:\
+**Q2:** Display:\
 Out of Stock → STOCK_QUANTITY = 0,\
 Low Stock → STOCK_QUANTITY <= 20
 In Stock → Otherwise
@@ -40,7 +40,7 @@ FROM PRODUCT;
 
 ----
 
-**Q:** Write a query to display:
+**Q3:** Write a query to display:
 
 - Available
 - Unavailable
@@ -65,7 +65,7 @@ FROM PRODUCT;
 
 ----
 
-**Q:** Write a query to create a column called DISCOUNT.
+**Q4:** Write a query to create a column called DISCOUNT.
 
 Rules:
 
@@ -74,7 +74,7 @@ Price between 2000 and 4999 → 10% Discount\
 Otherwise → No Discount
 
 ```sql
-ALTER PRODUCT
+ALTER TABLE PRODUCT
 ADD COLUMN DISCOUNT SMALLINT;
 
 UPDATE PRODUCT
@@ -85,7 +85,7 @@ SET DISCOUNT = CASE
 END;
 ```
 
-**Q:** Write a query to assign each product to a warehouse zone.
+**Q5:** Write a query to assign each product to a warehouse zone.
 
 Electronics & Wearables → Zone A\
 Furniture & Bags → Zone B\
@@ -112,7 +112,7 @@ FROM PRODUCT;
 
 ----
 
-**Q:** Write a query to display all products, but sort them in this order:
+**Q6:** Write a query to display all products, but sort them in this order:
 
 Expensive\
 Moderate\
@@ -133,7 +133,7 @@ END;
 
 ----
 
-**Q:** Write a query to display without updating the table, display a column called NEW_PRICE.
+**Q7:** Write a query to display without updating the table, display a column called NEW_PRICE.
 
 Rules:
 
@@ -159,7 +159,7 @@ FROM PRODUCT;
 
 ----
 
-**Q:** Write a query to create a column called CATEGORY_TYPE.
+**Q8:** Write a query to create a column called CATEGORY_TYPE.
 
 Rules:
 
@@ -187,7 +187,7 @@ END;
 
 ----
 
-**Q:** Write query to create a column called SHIPPING_PRIORITY.
+**Q9:** Write query to create a column called SHIPPING_PRIORITY.
 
 Rules:
 
@@ -196,11 +196,11 @@ Price between 1000 and 5000 → Medium\
 Otherwise → Low
 
 ```sql
-ALTER PRODUCT
+ALTER TABLE PRODUCT
 ADD COLUMN SHIPPING_PRIORITY;
 
 UPDATE PRODUCT
-SET SHIPPINP_PRIORITY = CASE
+SET SHIPPING_PRIORITY = CASE
     WHEN PRICE > 5000 AND IS_AVAIL THEN 'High'
     WHEN PRICE BETWEEN 1000 AND 5000 THEN 'Medium'
     ELSE 'Low'
@@ -209,7 +209,7 @@ END;
 
 ----
 
-**Q:** Write a query to display NAME, PRICE, STOCK_QUANTITY, INVENTORY_VALUE, VALUE_CATEGORY.
+**Q10:** Write a query to display NAME, PRICE, STOCK_QUANTITY, INVENTORY_VALUE, VALUE_CATEGORY.
 
 Where
 
