@@ -61,3 +61,19 @@ END;
 
 This way, we also updated the existing recordsof the table.
 
+----
+
+**Q:** Write a query to add another column to the existing table 'Product' containing 20 records. The column should categorize the stock into high, medium, and low.\
+If quantity is more than 100 → high stock,\
+if quantity is between 30 to 100 → medium stock,\
+if quantity is less than 30 → low stock.
+
+```sql
+UPDATE PRODUCT,
+SET STOCK_LEVEL = CASE
+    WHEN (STOCK_QUANTITY > 100) THEN 'High stock'
+    WHEN (STOCK_QUANTITY BETWEEN 30 AND 100) THEN 'Medium stock'
+    ELSE 'Low stock'
+END;
+```
+
