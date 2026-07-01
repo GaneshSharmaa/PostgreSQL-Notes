@@ -103,3 +103,16 @@ ALTER TABLE STUDENTS
 ADD CONSTRAINT AGE_CHECK CHECK (AGE >= 0);
 ```
 
+----
+
+### Dropping a constraint
+
+If you didn't name the constraint manually while creating it, you'll need to find its auto-generated name via `\d table_name` or pgAdmin.
+
+For example, you want to delete the constraint of the age.
+
+```sql
+ALTER TABLE STUDENTS
+DROP CONSTRAINT AGE_CHECK;
+```
+
