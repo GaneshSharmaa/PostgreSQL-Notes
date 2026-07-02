@@ -128,3 +128,25 @@ Enrollments
 
 Think of `JOIN` as a bridge between two tables that lets you query them together.
 
+----
+
+### Types of JOINs
+
+| Join type | Description |
+| ---- | ---- |
+| `INNER JOIN` | Returns only matching rows in both tables |
+| `LEFT JOIN` | Returns all rows from the left table, even if there's no match in the right table. |
+| `RIGHT JOIN` | Returns all rows from the right table, even if there's no match in the left table. |
+| `FULL JOIN` | Returns all rows from both tables, fills NULL for missing matches. |
+| `CROSS JOIN` | Returns cartesian product (every combination). |
+
+----
+
+### Inner join
+
+```sql
+SELECT columns
+FROM table_1
+JOIN table_2
+    ON table_1.common_col = table_2.common_col;
+```
