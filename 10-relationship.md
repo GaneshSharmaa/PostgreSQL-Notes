@@ -120,3 +120,11 @@ Enrollments
 +------------+-----------+
 ```
 
+----
+
+### Joins
+
+`JOIN` is used to combine rows from two or more tables based on a related column, usually a primary key in one table and a foreign key in another.
+
+Think of `JOIN` as a bridge between two tables that lets you query them together.
+
