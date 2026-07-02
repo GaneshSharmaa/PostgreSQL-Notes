@@ -146,7 +146,7 @@ Think of `JOIN` as a bridge between two tables that lets you query them together
 
 ```sql
 SELECT columns
-FROM table_1
-JOIN table_2
-    ON table_1.common_col = table_2.common_col;
+FROM table_1 t1
+JOIN table_2 t2
+    ON t1.common_col = t2.common_col;
 ```
