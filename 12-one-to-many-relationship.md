@@ -62,14 +62,49 @@ JOIN MARKS M
 1. Show each student's name along with their subject and marks.
 
 ```sql
-
+SELECT NAME, SUBJECT, MARKS
+FROM STUDENT S
+JOIN MARKS M
+    ON S.STUDENT_ID = M.STUDENT_ID;
 ```
 
 2. Show marks for only 'Divya Bharathi' in all subjects.
 
+```sql
+SELECT NAME, SUBJECT, MARKS
+FROM STUDENT S
+JOIN MARKS M
+    ON S.STUDENT_ID = M.STUDENT_ID
+WHERE NAME = 'Divya Bharathi';
+```
+
 3. Show only those subjects where marks are above 80.
+
+```sql
+SELECT NAME, SUBJECT, MARKS
+FROM STUDENT S
+JOIN MARKS M
+    ON S.STUDENT_ID = M.STUDENT_ID
+WHERE MARKS > 80;
+```
 
 4. Sort all student's subject marks in descending order of marks.
 
+```sql
+SELECT NAME, SUBJECT, MARKS
+FROM STUDENT S
+JOIN MARKS M
+    ON S.STUDENT_ID = M.STUDENT_ID
+ORDER BY MARKS DESC;
+```
+
 5. Show each student's average marks.
+
+```sql
+SELECT NAME, ROUND(AVG(MARKS), 2)
+FROM STUDENT S
+JOIN MARKS M
+    ON S.STUDENT_ID = M.STUDENT_ID
+GROUP BY NAME;
+```
 
