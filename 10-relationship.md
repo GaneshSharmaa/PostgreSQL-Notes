@@ -150,3 +150,59 @@ FROM table_1 t1
 JOIN table_2 t2
     ON t1.common_col = t2.common_col;
 ```
+
+----
+
+### Left join
+
+Returns everything from the left table, plus matching rows from the right.
+
+```sql
+SELECT columns
+FROM table_1 t1
+LEFT JOIN table_2 t2
+    ON t1.common_col = t2.common_col;
+```
+
+----
+
+### Right join
+
+Returns everything from the right table, plus matching rows from the left.
+
+```sql
+SELECT columns
+FROM table_1 t1
+RIGHT JOIN table_2 t2
+    ON t1.common_col = t2.common_col;
+```
+
+----
+
+### Full join
+
+Returns everything from both tables.
+
+```sql
+SELECT
+    t1.col_1,
+    t1.col_2,
+    m.col_1,
+    m.col_2
+FROM table_1 t1
+FULL JOIN table_2 t2
+    on t1.col_1 = t2.col_2;
+```
+
+----
+
+### Cross join
+
+Returns every possible combination of rows.
+
+```sql
+SELECT *
+FROM table_1
+CROSS JOIN table_2;
+```
+
