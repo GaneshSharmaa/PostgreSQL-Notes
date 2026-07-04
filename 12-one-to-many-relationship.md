@@ -108,3 +108,65 @@ JOIN MARKS M
 GROUP BY NAME;
 ```
 
+----
+
+### Some more questions:
+
+**Q1:** Show each order along with the product name and price.
+
+```sql
+SELECT O.ORDER_ID, O.CUSTOMER_NAME, P.PRODUCT_NAME, P.PRICE
+FROM PRODUCTS P
+INNER JOIN ORDERS O
+    ON O.PRODUCT_ID = P.PRODUCT_ID;
+```
+
+**Q2:** Show all products even if they were never ordered.
+
+```sql
+SELECT O.ORDER_ID, O.CUSTOMER_NAME, P.PRODUCT_NAME, P.PRICE
+FROM PRODUCTS P
+LEFT JOIN ORDERS O
+    ON O.PRODUCT_ID = P.PRODUCT_ID;
+```
+
+**Q3:** Show orders for only 'Electronics' category.
+
+```sql
+SELECT O.ORDER_ID, O.CUSTOMER_NAME, P.PRODUCT_NAME, P.CATEGORY, P.PRICE
+FROM PRODUCTS P
+JOIN ORDERS O ON O.PRODUCT_ID = P.PRODUCT_ID
+WHERE P.CATEGORY = 'Electronics';
+```
+
+**Q4:** List all orders sorted by product price (high to low).
+
+```sql
+SELECT O.ORDER_ID, P.PRODUCT_NAME, P.PRICE
+FROM ORDERS O
+JOIN PRODUCTS P ON O.PRODUCT_ID = P.PRODUCT_ID
+ORDER BY P.PRICE DESC;
+```
+
+**Q5:** Show number of orders placed for each product.
+
+```sql
+SELECT P.PRODUCT_NAME, COUNT(O.ORDER_ID)
+FROM ORDERS O
+RIGHT JOIN PRODUCTS P ON O.PRODUCT_ID = P.PRODUCT_ID
+GROUP BY P.PRODUCT_NAME;
+```
+
+**Q6:** Show total revenue earned per product.
+
+```sql
+SELECT P.PRODUCT_NAME, SUM(P.PRICE * O.QUANTITY)
+FROM ORDERS O
+JOIN PRODUCTS P ON O.PRODUCT_ID = P.PRODUCT_ID
+GROUP BY P.PRODUCT_NAME;
+```
+
+**Q7:** Show products where total order revenue > 2000.
+
+**Q8:** Show unique customers who ordered 'Fitness' products.
+
